@@ -1,0 +1,206 @@
+// Extra rules needed for the LMS red theme
+//
+// The _extras.scss file is imported after all other rules by
+// the LMS Sass. For your own theme, you can override this file
+// to add any custom rules that you need. You can also import
+// partials directly into this file so that you can break your
+// rules into modular pieces.
+
+@import "certificates";
+a,
+h1,
+p,
+input,
+div,
+span,
+button {
+    font-family: Roboto sans-serif !important;
+}
+.global-header {
+    background: #1f1d20;
+}
+.global-header .nav-links .nav-item .my__nav-item {
+    margin: 0px 10px;
+}
+.global-header {
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+}
+
+.global-header .nav-links .nav-item {
+    margin: 0 10px;
+}
+.global-header .nav-links .nav-item a {
+    color: white;
+    font-size: 14px;
+}
+.global-header .nav-links .nav-item a:hover {
+    color: $primary;
+}
+.global-header .nav-links .secondary .nav-item {
+    padding: 5px 0 0;
+}
+.global-header .nav-links .secondary {
+    & .btn {
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        font-family: Roboto, sans-serif !important;
+    }
+    & a.register-btn {
+        background: none;
+        color: rgb(189, 189, 189);
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: underline;
+            background-color: transparent;
+        }
+    }
+    & a.sign-in-btn {
+        color: $primary;
+        border: 2px solid $primary;
+        font-weight: 400;
+        padding: 7px 24px 6px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border-radius: 0px;
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+.content-wrapper {
+    padding: 0px;
+    margin: 0px;
+}
+.home > header {
+    background-color: transparent;
+    background-image: url("/static/hust-theme/images/banner-home.jpg");
+    & .title {
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.8;
+        & .course-search .search-button {
+            background-color: transparent;
+            border: 2px solid $primary;
+            &:hover {
+                background-color: $primary;
+                & > span.icon {
+                    color: white;
+                }
+            }
+            & span.icon {
+                color: $primary;
+            }
+        }
+    }
+}
+.home > header .title > .heading-group h1 {
+    color: white;
+    text-transform: uppercase;
+}
+.home > header .title > .heading-group p {
+    color: rgb(189, 189, 189);
+    font-style: normal;
+}
+.home > header .title .course-search input.search-input {
+    outline: none;
+}
+.home > header .title .course-search input.search-input:hover,
+.home > header .title .course-search input.search-input:focus {
+    border: 2px solid $primary;
+}
+.our-course {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 6000;
+    position: relative;
+}
+.our-course::after {
+    content: "";
+    position: absolute;
+    top: 170%;
+    left: 45%;
+    width: 10%;
+    height: 2px;
+    background: #000;
+}
+.courses-container .courses .course .course-info .course-title {
+    margin: 5px 0 10px 0;
+    color: $primary;
+}
+.courses-container .courses .course {
+	border-bottom: 3px solid $primary;
+
+}
+
+// Footer
+.wrapper-footer {
+    background: #1f1d20;
+    color: white;
+    font-size: 14px;
+    & footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+nav.nav-colophon ol {
+    display: flex;
+    align-items: center;
+    & li {
+        margin-right: 15px;
+    }
+    & li a {
+        color: white;
+        font-size: 13px;
+    }
+    & li a:hover {
+        color: $primary;
+        text-decoration: none;
+        border-bottom: 1px dotted $primary;
+    }
+}
+#contact {
+    color: white;
+    &:hover {
+        color: $primary;
+        text-decoration: none;
+        border-bottom: 1px dotted $primary;
+    }
+}
+.wrapper-logo {
+    margin: 15px 0px 15px 5px;
+    & p a img {
+        width: 70px;
+    }
+}
+
+.copyright {
+    font-size: 0.6875em;
+    color: #767676;
+    text-align: left;
+    font-size: 11px;
+    & a {
+        color: #0075b4;
+        text-decoration: none !important;
+        &:hover {
+            border-bottom: 1px dotted #0075b4;
+        }
+    }
+}
+.nav-legal ul {
+    display: flex;
+    font-size: 11px;
+    color: #767676;
+    & li a {
+        transition: link-color 0.15s ease-in-out 0s, border 0.15s ease-in-out 0s;
+        color: #0075b4;
+        text-decoration: none !important;
+        font-size: 11px;
+        &:hover {
+            border-bottom: 1px dotted #0075b4;
+        }
+    }
+}
